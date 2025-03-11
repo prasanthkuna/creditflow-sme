@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -6,6 +5,8 @@ import Hero from '@/components/Hero';
 import ProblemStats from '@/components/ProblemStats';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
+import Testimonials from '@/components/Testimonials';
+import Pricing from '@/components/Pricing';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -41,9 +42,24 @@ const Index = () => {
       <main>
         <Hero />
         <ProblemStats />
-        <Features />
-        <HowItWorks />
-        <CTA />
+        <section id="features">
+          <Features />
+        </section>
+        <section id="how-it-works">
+          <HowItWorks />
+        </section>
+        <section id="testimonials" className="py-16">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tight text-center mb-10">What Our Customers Say</h2>
+            <Testimonials />
+          </div>
+        </section>
+        <section id="pricing">
+          <Pricing />
+        </section>
+        <div id="cta-section">
+          <CTA />
+        </div>
       </main>
       <Footer />
     </div>

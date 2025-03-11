@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Menu, X } from "lucide-react";
@@ -10,15 +9,28 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
   const scrollToCTA = () => {
     if (location.pathname === '/') {
-      // If on home page, scroll to CTA
       const ctaElement = document.getElementById('cta-section');
       if (ctaElement) {
         ctaElement.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // If on another page, navigate to home and then scroll to CTA
       navigate('/', { state: { scrollToCTA: true } });
     }
     
@@ -31,7 +43,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
-          <Link to="/">
+          <Link to="/" onClick={handleLogoClick}>
             <div className="flex items-center gap-2">
               <CreditCard className="h-6 w-6 text-indigo-600" />
               <span className="text-xl font-bold">Circle<span className="text-emerald-500">Pe</span></span>
@@ -41,10 +53,10 @@ const Navbar = () => {
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          <Link to="/#features" className="text-sm font-medium hover:text-indigo-600 transition-colors">Features</Link>
-          <Link to="/#how-it-works" className="text-sm font-medium hover:text-indigo-600 transition-colors">How It Works</Link>
-          <Link to="/testimonials" className="text-sm font-medium hover:text-indigo-600 transition-colors">Testimonials</Link>
-          <Link to="/pricing" className="text-sm font-medium hover:text-indigo-600 transition-colors">Pricing</Link>
+          <a href="/#features" className="text-sm font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('features'); }}>Features</a>
+          <a href="/#how-it-works" className="text-sm font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('how-it-works'); }}>How It Works</a>
+          <a href="/#testimonials" className="text-sm font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Testimonials</a>
+          <a href="/#pricing" className="text-sm font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('pricing'); }}>Pricing</a>
         </div>
         
         <div className="hidden md:flex items-center gap-4">
@@ -73,10 +85,10 @@ const Navbar = () => {
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="flex flex-col p-6 space-y-6">
-          <Link to="/#features" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Features</Link>
-          <Link to="/#how-it-works" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>How It Works</Link>
-          <Link to="/testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
-          <Link to="/pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
+          <a href="/#features" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('features'); }}>Features</a>
+          <a href="/#how-it-works" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('how-it-works'); }}>How It Works</a>
+          <a href="/#testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Testimonials</a>
+          <a href="/#pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={(e) => { e.preventDefault(); scrollToSection('pricing'); }}>Pricing</a>
           <div className="pt-6 flex flex-col gap-4">
             <Button 
               variant="default" 
