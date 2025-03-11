@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -11,16 +12,20 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
-          <CreditCard className="h-6 w-6 text-indigo-600" />
-          <span className="text-xl font-bold">Circle<span className="text-emerald-500">Pe</span></span>
+          <Link to="/">
+            <div className="flex items-center gap-2">
+              <CreditCard className="h-6 w-6 text-indigo-600" />
+              <span className="text-xl font-bold">Circle<span className="text-emerald-500">Pe</span></span>
+            </div>
+          </Link>
         </div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <a href="#features" className="text-sm font-medium hover:text-indigo-600 transition-colors">Features</a>
           <a href="#how-it-works" className="text-sm font-medium hover:text-indigo-600 transition-colors">How It Works</a>
-          <a href="#testimonials" className="text-sm font-medium hover:text-indigo-600 transition-colors">Testimonials</a>
-          <a href="#pricing" className="text-sm font-medium hover:text-indigo-600 transition-colors">Pricing</a>
+          <Link to="/testimonials" className="text-sm font-medium hover:text-indigo-600 transition-colors">Testimonials</Link>
+          <Link to="/pricing" className="text-sm font-medium hover:text-indigo-600 transition-colors">Pricing</Link>
         </div>
         
         <div className="hidden md:flex items-center gap-4">
@@ -46,8 +51,8 @@ const Navbar = () => {
         <div className="flex flex-col p-6 space-y-6">
           <a href="#features" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Features</a>
           <a href="#how-it-works" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>How It Works</a>
-          <a href="#testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
-          <a href="#pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</a>
+          <Link to="/testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
+          <Link to="/pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
           <div className="pt-6 flex flex-col gap-4">
             <Button variant="default" className="gap-2" onClick={() => setIsMenuOpen(false)}>
               Join Waitlist <ArrowRight className="h-4 w-4" />

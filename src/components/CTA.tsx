@@ -1,11 +1,33 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowRight, CreditCard } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const CTA = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState('');
+  const [businessType, setBusinessType] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Thank you for joining our waitlist!",
+        description: "We'll notify you as soon as early access is available.",
+      });
+      setEmail('');
+      setBusinessType('');
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
   return (
     <section className="py-20">
       <div className="container px-4 md:px-6">
@@ -82,17 +104,20 @@ const CTA = () => {
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl">
                 <h3 className="text-xl font-semibold text-white mb-6">Join Waitlist</h3>
                 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div>
                     <Input 
                       type="email" 
                       placeholder="Business Email" 
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
                   </div>
                   
                   <div>
-                    <Select>
+                    <Select value={businessType} onValueChange={setBusinessType}>
                       <SelectTrigger className="bg-white/20 border-white/30 text-white">
                         <SelectValue placeholder="Business Type" />
                       </SelectTrigger>
@@ -106,8 +131,13 @@ const CTA = () => {
                     </Select>
                   </div>
                   
-                  <Button className="w-full bg-white text-indigo-600 hover:bg-white/90 hover:text-indigo-700 gap-2">
-                    Join Waitlist <ArrowRight className="h-4 w-4" />
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-white text-indigo-600 hover:bg-white/90 hover:text-indigo-700 gap-2"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Processing..." : "Join Waitlist"} 
+                    {!isSubmitting && <ArrowRight className="h-4 w-4" />}
                   </Button>
                 </form>
                 

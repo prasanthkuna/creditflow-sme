@@ -2,10 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Smartphone, Download } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
+  const { toast } = useToast();
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
+  const [activeType, setActiveType] = useState<'business' | 'personal'>('business');
   
   useEffect(() => {
     const timer1 = setTimeout(() => {
@@ -25,6 +28,29 @@ const Hero = () => {
       clearTimeout(timer2);
     };
   }, [count1, count2]);
+  
+  const handleTypeChange = (type: 'business' | 'personal') => {
+    setActiveType(type);
+    
+    if (type === 'business') {
+      toast({
+        title: "Business Mode Activated",
+        description: "Optimized for SMEs and business transactions.",
+      });
+    } else {
+      toast({
+        title: "Personal Mode Activated",
+        description: "Optimized for individual credit card management.",
+      });
+    }
+  };
+  
+  const handleJoinWaitlist = () => {
+    const scrollToElement = document.getElementById('pricing');
+    if (scrollToElement) {
+      scrollToElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <section className="relative overflow-hidden pt-16 pb-24 md:pt-20 md:pb-28">
@@ -55,15 +81,23 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto animate-fade-in opacity-0" style={{ animationDelay: "0.8s" }}>
-            <Button className="h-12 px-6 gap-2" size="lg">
+            <Button className="h-12 px-6 gap-2" size="lg" onClick={handleJoinWaitlist}>
               Join Waitlist <ArrowRight className="h-5 w-5" />
             </Button>
             
             <div className="flex gap-3 w-full sm:w-auto justify-center">
-              <Button variant="outline" className="flex-1 sm:flex-none">
+              <Button 
+                variant={activeType === 'business' ? 'default' : 'outline'} 
+                className={`flex-1 sm:flex-none ${activeType === 'business' ? 'bg-indigo-600' : ''}`}
+                onClick={() => handleTypeChange('business')}
+              >
                 <CreditCard className="mr-2 h-5 w-5" /> Business
               </Button>
-              <Button variant="outline" className="flex-1 sm:flex-none">
+              <Button 
+                variant={activeType === 'personal' ? 'default' : 'outline'} 
+                className={`flex-1 sm:flex-none ${activeType === 'personal' ? 'bg-indigo-600' : ''}`}
+                onClick={() => handleTypeChange('personal')}
+              >
                 <Smartphone className="mr-2 h-5 w-5" /> Personal
               </Button>
             </div>
