@@ -53,7 +53,7 @@ const CTA = () => {
             <div className="max-w-md text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business Finances?</h2>
               <p className="text-white/80 mb-6">
-                Join 15,000+ SMEs already optimizing their cash flow and earning rewards with CreditFlow.
+                Join 15,000+ SMEs already optimizing their cash flow and earning rewards with CirclePe.
               </p>
               
               <ul className="space-y-3 mb-8">
@@ -80,7 +80,7 @@ const CTA = () => {
             
             <div className="w-full max-w-md">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl">
-                <h3 className="text-xl font-semibold text-white mb-6">Get Early Access</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Join Waitlist</h3>
                 
                 <form className="space-y-4">
                   <div>
@@ -107,7 +107,7 @@ const CTA = () => {
                   </div>
                   
                   <Button className="w-full bg-white text-indigo-600 hover:bg-white/90 hover:text-indigo-700 gap-2">
-                    Start 14-Day Free Trial <ArrowRight className="h-4 w-4" />
+                    Join Waitlist <ArrowRight className="h-4 w-4" />
                   </Button>
                 </form>
                 

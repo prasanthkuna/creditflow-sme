@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CreditCard, Smartphone } from "lucide-react";
+import { ArrowRight, CreditCard, Smartphone, Download } from "lucide-react";
 
 const Hero = () => {
   const [count1, setCount1] = useState(0);
@@ -56,7 +56,7 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto animate-fade-in opacity-0" style={{ animationDelay: "0.8s" }}>
             <Button className="h-12 px-6 gap-2" size="lg">
-              Get Early Access <ArrowRight className="h-5 w-5" />
+              Join Waitlist <ArrowRight className="h-5 w-5" />
             </Button>
             
             <div className="flex gap-3 w-full sm:w-auto justify-center">
@@ -67,6 +67,29 @@ const Hero = () => {
                 <Smartphone className="mr-2 h-5 w-5" /> Personal
               </Button>
             </div>
+          </div>
+          
+          {/* App Download Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in opacity-0" style={{ animationDelay: "0.9s" }}>
+            <Button variant="outline" className="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.5" />
+                <path d="M18 14.5V16" />
+                <path d="M18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                <path d="M14 17.5h-4" />
+              </svg>
+              <div className="flex flex-col items-start">
+                <span className="text-xs">Download on</span>
+                <span className="text-sm font-semibold">App Store</span>
+              </div>
+            </Button>
+            <Button variant="outline" className="flex items-center gap-2">
+              <Download className="h-5 w-5" />
+              <div className="flex flex-col items-start">
+                <span className="text-xs">Get it on</span>
+                <span className="text-sm font-semibold">Google Play</span>
+              </div>
+            </Button>
           </div>
           
           <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center animate-fade-in opacity-0" style={{ animationDelay: "1s" }}>

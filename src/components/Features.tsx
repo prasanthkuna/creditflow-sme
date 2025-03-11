@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CreditCard, Receipt, Layers, Award, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -64,6 +64,12 @@ const featureItems = [
 ];
 
 const Features = () => {
+  const [activeTab, setActiveTab] = useState("b2b-payments");
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+  };
+
   return (
     <section id="features" className="py-20">
       <div className="container px-4 md:px-6">
@@ -76,7 +82,7 @@ const Features = () => {
           </p>
         </div>
         
-        <Tabs defaultValue="b2b-payments" className="w-full animate-fade-in opacity-0" style={{ animationDelay: "400ms" }}>
+        <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full animate-fade-in opacity-0" style={{ animationDelay: "400ms" }}>
           <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full md:w-fit mx-auto mb-8">
             {featureItems.map((item) => (
               <TabsTrigger key={item.id} value={item.id} className="flex items-center gap-2 py-3">
@@ -107,7 +113,7 @@ const Features = () => {
                   </ul>
                   
                   <Button className="mt-4 gap-2">
-                    Try It Now <ArrowRight className="h-4 w-4" />
+                    Join Waitlist <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
                 

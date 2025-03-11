@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <CreditCard className="h-6 w-6 text-indigo-600" />
-          <span className="text-xl font-bold">CreditFlow<span className="text-emerald-500">SME</span></span>
+          <span className="text-xl font-bold">Circle<span className="text-emerald-500">Pe</span></span>
         </div>
         
         {/* Desktop Menu */}
@@ -24,9 +24,8 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" size="sm">Sign In</Button>
           <Button variant="default" size="sm" className="gap-1">
-            Get Early Access <ArrowRight className="h-4 w-4" />
+            Join Waitlist <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
         
@@ -50,9 +49,8 @@ const Navbar = () => {
           <a href="#testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
           <a href="#pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</a>
           <div className="pt-6 flex flex-col gap-4">
-            <Button variant="outline" onClick={() => setIsMenuOpen(false)}>Sign In</Button>
             <Button variant="default" className="gap-2" onClick={() => setIsMenuOpen(false)}>
-              Get Early Access <ArrowRight className="h-4 w-4" />
+              Join Waitlist <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>
