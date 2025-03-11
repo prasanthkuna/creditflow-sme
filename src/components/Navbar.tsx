@@ -3,10 +3,26 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const scrollToCTA = () => {
+    const ctaElement = document.querySelector('#cta-section');
+    if (ctaElement) {
+      ctaElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If on another page, navigate to home and then scroll to CTA
+      navigate('/', { state: { scrollToCTA: true } });
+    }
+    
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
   
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b">
@@ -29,7 +45,12 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="default" size="sm" className="gap-1">
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="gap-1" 
+            onClick={scrollToCTA}
+          >
             Join Waitlist <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
@@ -54,7 +75,11 @@ const Navbar = () => {
           <Link to="/testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
           <Link to="/pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
           <div className="pt-6 flex flex-col gap-4">
-            <Button variant="default" className="gap-2" onClick={() => setIsMenuOpen(false)}>
+            <Button 
+              variant="default" 
+              className="gap-2" 
+              onClick={scrollToCTA}
+            >
               Join Waitlist <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

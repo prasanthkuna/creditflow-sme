@@ -29,7 +29,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="py-20">
+    <section id="cta-section" className="py-20">
       <div className="container px-4 md:px-6">
         <div className="relative rounded-3xl overflow-hidden bg-gradient-cta shadow-xl">
           <div className="absolute inset-0 bg-cta-gradient opacity-90"></div>

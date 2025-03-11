@@ -1,5 +1,6 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProblemStats from '@/components/ProblemStats';
@@ -9,6 +10,20 @@ import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Check if we should scroll to CTA section after navigation
+    if (location.state && location.state.scrollToCTA) {
+      const ctaElement = document.getElementById('cta-section');
+      if (ctaElement) {
+        setTimeout(() => {
+          ctaElement.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
