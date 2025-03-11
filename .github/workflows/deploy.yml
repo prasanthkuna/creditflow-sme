@@ -33,4 +33,9 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: gh-pages 
+          branch: gh-pages
+          
+      - name: Verify Deployment
+        run: |
+          echo "🚀 Deployment to GitHub Pages completed!"
+          echo "🌐 Site should be available at: https://prasanthkuna.github.io/creditflow-sme/" 
