@@ -11,7 +11,9 @@ const PricingPage = () => {
       <Navbar />
       <main>
         <Pricing />
-        <CTA />
+        <div id="cta-section">
+          <CTA />
+        </div>
       </main>
       <Footer />
     </div>

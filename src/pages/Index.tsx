@@ -22,6 +22,17 @@ const Index = () => {
         }, 100);
       }
     }
+    
+    // Handle hash fragment for section navigation
+    if (location.hash) {
+      const id = location.hash.substring(1); // remove the # character
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
   }, [location]);
   
   return (

@@ -14,7 +14,9 @@ const TestimonialsPage = () => {
           <h1 className="text-3xl font-bold tracking-tight text-center mb-10">What Our Customers Say</h1>
           <Testimonials />
         </div>
-        <CTA />
+        <div id="cta-section">
+          <CTA />
+        </div>
       </main>
       <Footer />
     </div>

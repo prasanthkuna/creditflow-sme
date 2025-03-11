@@ -11,9 +11,12 @@ const Navbar = () => {
   const location = useLocation();
   
   const scrollToCTA = () => {
-    const ctaElement = document.querySelector('#cta-section');
-    if (ctaElement) {
-      ctaElement.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      // If on home page, scroll to CTA
+      const ctaElement = document.getElementById('cta-section');
+      if (ctaElement) {
+        ctaElement.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       // If on another page, navigate to home and then scroll to CTA
       navigate('/', { state: { scrollToCTA: true } });
@@ -38,8 +41,8 @@ const Navbar = () => {
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          <a href="#features" className="text-sm font-medium hover:text-indigo-600 transition-colors">Features</a>
-          <a href="#how-it-works" className="text-sm font-medium hover:text-indigo-600 transition-colors">How It Works</a>
+          <Link to="/#features" className="text-sm font-medium hover:text-indigo-600 transition-colors">Features</Link>
+          <Link to="/#how-it-works" className="text-sm font-medium hover:text-indigo-600 transition-colors">How It Works</Link>
           <Link to="/testimonials" className="text-sm font-medium hover:text-indigo-600 transition-colors">Testimonials</Link>
           <Link to="/pricing" className="text-sm font-medium hover:text-indigo-600 transition-colors">Pricing</Link>
         </div>
@@ -70,8 +73,8 @@ const Navbar = () => {
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="flex flex-col p-6 space-y-6">
-          <a href="#features" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Features</a>
-          <a href="#how-it-works" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>How It Works</a>
+          <Link to="/#features" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Features</Link>
+          <Link to="/#how-it-works" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>How It Works</Link>
           <Link to="/testimonials" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
           <Link to="/pricing" className="text-lg font-medium hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
           <div className="pt-6 flex flex-col gap-4">
