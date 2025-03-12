@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <CreditCard className="h-6 w-6 text-indigo-600" />
-              <span className="text-xl font-bold">Circle<span className="text-emerald-500">Pe</span></span>
+              <span className="text-xl font-bold">Card<span className="text-emerald-500">Pe</span></span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               Turn your credit cards into working capital for your SME business.
