@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,7 +10,7 @@ const testimonials = [
     role: "Textile Business Owner",
     company: "Sharma Textiles",
     image: "https://placehold.co/400x400/indigo/white?text=PS",
-    testimonial: "CirclePe has transformed how we manage vendor payments. We've saved ₹1.2L/yr using their platform while earning valuable rewards on our credit cards."
+    testimonial: "CardPe has transformed how we manage vendor payments. We've saved ₹1.2L/yr using their platform while earning valuable rewards on our credit cards."
   },
   {
     id: 2,
@@ -19,7 +18,7 @@ const testimonials = [
     role: "CEO",
     company: "TechServe Solutions",
     image: "https://placehold.co/400x400/indigo/white?text=VM",
-    testimonial: "Managing multiple credit cards for business expenses was a nightmare before CirclePe. Now we track everything in one place and our cash flow has improved by 40%."
+    testimonial: "Managing multiple credit cards for business expenses was a nightmare before CardPe. Now we track everything in one place and our cash flow has improved by 40%."
   },
   {
     id: 3,
@@ -27,7 +26,7 @@ const testimonials = [
     role: "Finance Director",
     company: "GreenLeaf Organics",
     image: "https://placehold.co/400x400/indigo/white?text=AP", 
-    testimonial: "The GST payment feature alone has saved us countless hours every month. CirclePe's platform is intuitive and their customer support is exceptional."
+    testimonial: "The GST payment feature alone has saved us countless hours every month. CardPe's platform is intuitive and their customer support is exceptional."
   },
   {
     id: 4,
@@ -35,7 +34,7 @@ const testimonials = [
     role: "Founder",
     company: "Innovative Electronics",
     image: "https://placehold.co/400x400/indigo/white?text=RK",
-    testimonial: "As a growing electronics business, cash flow management is critical. CirclePe has given us breathing room with their 45-day credit window and simplified our B2B payments."
+    testimonial: "As a growing electronics business, cash flow management is critical. CardPe has given us breathing room with their 45-day credit window and simplified our B2B payments."
   },
   {
     id: 5,
@@ -43,7 +42,7 @@ const testimonials = [
     role: "Operations Head",
     company: "Sparkle Hospitality",
     image: "https://placehold.co/400x400/indigo/white?text=NG",
-    testimonial: "CirclePe helped us transition from legacy payment systems to digital solutions seamlessly. We've reduced payment processing time by 70%."
+    testimonial: "CardPe helped us transition from legacy payment systems to digital solutions seamlessly. We've reduced payment processing time by 70%."
   },
   {
     id: 6,
@@ -51,7 +50,7 @@ const testimonials = [
     role: "Director",
     company: "Precision Manufacturing Ltd",
     image: "https://placehold.co/400x400/indigo/white?text=SI",
-    testimonial: "The rewards optimization feature is brilliant! We've accumulated over ₹80,000 in cashback this year alone just by routing payments through CirclePe."
+    testimonial: "The rewards optimization feature is brilliant! We've accumulated over ₹80,000 in cashback this year alone just by routing payments through CardPe."
   }
 ];
 
@@ -64,7 +63,7 @@ const Testimonials = () => {
             Trusted by <span className="text-indigo-600">15,000+</span> Indian SMEs
           </h2>
           <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
-            Hear from business owners who've transformed their financial operations with CirclePe
+            Hear from business owners who've transformed their financial operations with CardPe
           </p>
         </div>
         
@@ -111,10 +110,22 @@ const Testimonials = () => {
         <div className="mt-20 max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-10">Trusted by Companies Across India</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
-            <img src="https://placehold.co/160x80/indigo/white?text=MANUFACTURING" alt="Manufacturing" className="h-12 mx-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="https://placehold.co/160x80/indigo/white?text=TECHNOLOGY" alt="Technology" className="h-12 mx-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="https://placehold.co/160x80/indigo/white?text=RETAIL" alt="Retail" className="h-12 mx-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="https://placehold.co/160x80/indigo/white?text=SERVICES" alt="Services" className="h-12 mx-auto grayscale hover:grayscale-0 transition-all" />
+            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 transition-transform hover:scale-105">
+              <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <h4 className="text-lg font-semibold text-white text-center">Manufacturing</h4>
+            </div>
+            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 p-6 transition-transform hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <h4 className="text-lg font-semibold text-white text-center">Technology</h4>
+            </div>
+            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-6 transition-transform hover:scale-105">
+              <div className="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <h4 className="text-lg font-semibold text-white text-center">Retail</h4>
+            </div>
+            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 p-6 transition-transform hover:scale-105">
+              <div className="absolute inset-0 bg-amber-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <h4 className="text-lg font-semibold text-white text-center">Services</h4>
+            </div>
           </div>
         </div>
       </div>

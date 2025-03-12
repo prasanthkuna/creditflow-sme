@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CreditCard } from "lucide-react";
 
@@ -75,19 +74,22 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-4 md:mb-0">
-            <div className="flex items-center border py-1 px-3 rounded bg-white">
-              <img src="https://placehold.co/80x30/indigo/white?text=PCI-DSS" alt="PCI DSS Compliant" className="h-6" />
+            <div className="flex items-center border-2 border-blue-600 py-2 px-4 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+              <img src="https://placehold.co/80x30/0052cc/white?text=PCI-DSS" alt="PCI DSS Compliant" className="h-6" />
+              <span className="ml-2 text-blue-700 font-medium">Compliant</span>
             </div>
-            <div className="flex items-center border py-1 px-3 rounded bg-white">
-              <img src="https://placehold.co/80x30/indigo/white?text=GSTN" alt="GSTN Approved" className="h-6" />
+            <div className="flex items-center border-2 border-green-600 py-2 px-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
+              <img src="https://placehold.co/80x30/00875a/white?text=GSTN" alt="GSTN Approved" className="h-6" />
+              <span className="ml-2 text-green-700 font-medium">Approved</span>
             </div>
-            <div className="flex items-center border py-1 px-3 rounded bg-white">
-              <img src="https://placehold.co/80x30/indigo/white?text=ISO27001" alt="ISO 27001" className="h-6" />
+            <div className="flex items-center border-2 border-purple-600 py-2 px-4 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
+              <img src="https://placehold.co/80x30/6554c0/white?text=ISO27001" alt="ISO 27001" className="h-6" />
+              <span className="ml-2 text-purple-700 font-medium">Certified</span>
             </div>
           </div>
           
           <p className="text-sm text-muted-foreground">
-            © 2023 CirclePe. All rights reserved.
+            © 2023 CardPe. All rights reserved.
           </p>
         </div>
       </div>

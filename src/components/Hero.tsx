@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Smartphone, Download } from "lucide-react";
@@ -126,7 +125,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center animate-fade-in opacity-0" style={{ animationDelay: "1s" }}>
+          {/* <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center animate-fade-in opacity-0" style={{ animationDelay: "1s" }}>
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-indigo-600">{count1.toLocaleString()}+</span>
               <span className="text-sm text-muted-foreground">SMEs Trust Us</span>
@@ -141,15 +140,16 @@ const Hero = () => {
               <span className="text-2xl font-bold text-indigo-600">4.8/5</span>
               <span className="text-sm text-muted-foreground">User Rating</span>
             </div>
-          </div>
+          </div> */}
           
           <div className="w-full max-w-4xl bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-1 mt-10 animate-fade-in opacity-0" style={{ animationDelay: "1.2s" }}>
             <div className="bg-white rounded-xl shadow-sm p-4 flex flex-wrap justify-center items-center gap-6">
-              <img src="https://placehold.co/100x40/indigo/white?text=HDFC" alt="HDFC" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://placehold.co/100x40/indigo/white?text=ICICI" alt="ICICI" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://placehold.co/100x40/indigo/white?text=SBI" alt="SBI" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://placehold.co/100x40/indigo/white?text=AXIS" alt="AXIS" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://placehold.co/100x40/indigo/white?text=AMEX" alt="AMEX" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="https://placehold.co/100x40/e31837/white?text=HDFC" alt="HDFC" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="https://placehold.co/100x40/f37e20/white?text=ICICI" alt="ICICI" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="https://placehold.co/100x40/1a4784/white?text=SBI" alt="SBI" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="https://placehold.co/100x40/97144d/white?text=AXIS" alt="AXIS" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="https://placehold.co/100x40/006fcf/white?text=AMEX" alt="AMEX" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="https://placehold.co/100x40/003874/white?text=KOTAK" alt="KOTAK" className="h-8 grayscale hover:grayscale-0 transition-all" />
             </div>
           </div>
         </div>

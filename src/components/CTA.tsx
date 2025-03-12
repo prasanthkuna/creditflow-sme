@@ -75,7 +75,7 @@ const CTA = () => {
             <div className="max-w-md text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business Finances?</h2>
               <p className="text-white/80 mb-6">
-                Join 15,000+ SMEs already optimizing their cash flow and earning rewards with CirclePe.
+                Join 15,000+ SMEs already optimizing their cash flow and earning rewards with CardPe.
               </p>
               
               <ul className="space-y-3 mb-8">
