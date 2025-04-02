@@ -144,12 +144,12 @@ const Hero = () => {
           
           <div className="w-full max-w-4xl bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-1 mt-10 animate-fade-in opacity-0" style={{ animationDelay: "1.2s" }}>
             <div className="bg-white rounded-xl shadow-sm p-4 flex flex-wrap justify-center items-center gap-6">
-              <img src="https://via.placeholder.com/100x40/e31837/ffffff?text=HDFC" alt="HDFC" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://via.placeholder.com/100x40/f37e20/ffffff?text=ICICI" alt="ICICI" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://via.placeholder.com/100x40/1a4784/ffffff?text=SBI" alt="SBI" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://via.placeholder.com/100x40/97144d/ffffff?text=AXIS" alt="AXIS" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://via.placeholder.com/100x40/006fcf/ffffff?text=AMEX" alt="AMEX" className="h-8 grayscale hover:grayscale-0 transition-all" />
-              <img src="https://via.placeholder.com/100x40/003874/ffffff?text=KOTAK" alt="KOTAK" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="/images/bank-logos/hdfc.svg" alt="HDFC" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="/images/bank-logos/icici.svg" alt="ICICI" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="/images/bank-logos/sbi.svg" alt="SBI" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="/images/bank-logos/axis.svg" alt="AXIS" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="/images/bank-logos/amex.svg" alt="AMEX" className="h-8 grayscale hover:grayscale-0 transition-all" />
+              <img src="/images/bank-logos/kotak.svg" alt="KOTAK" className="h-8 grayscale hover:grayscale-0 transition-all" />
             </div>
           </div>
         </div>
