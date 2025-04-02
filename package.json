@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cardpe.org",
+  "homepage": "https://prasanthkuna.github.io/creditflow-sme",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
