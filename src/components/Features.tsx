@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CreditCard, Receipt, Layers, Award, ArrowRight } from "lucide-react";
@@ -17,7 +16,7 @@ const featureItems = [
       "Schedule recurring payments automatically",
       "Get receipt management & GST itemization built-in",
     ],
-    imageSrc: "https://placehold.co/600x400/indigo/white?text=B2B+Payments+Demo"
+    imageSrc: "https://via.placeholder.com/600x400/4f46e5/ffffff?text=B2B+Payments+Demo"
   },
   {
     id: "gst-compliance",
@@ -31,7 +30,7 @@ const featureItems = [
       "Get filing reminders and deadline alerts",
       "Access detailed GST analytical reports",
     ],
-    imageSrc: "https://placehold.co/600x400/indigo/white?text=GST+Compliance+Demo"
+    imageSrc: "https://via.placeholder.com/600x400/4f46e5/ffffff?text=GST+Compliance+Demo"
   },
   {
     id: "multi-card",
@@ -45,7 +44,7 @@ const featureItems = [
       "Track all expenses with custom categories",
       "Integrate with accounting software seamlessly",
     ],
-    imageSrc: "https://placehold.co/600x400/indigo/white?text=Multi-Card+Demo"
+    imageSrc: "https://via.placeholder.com/600x400/4f46e5/ffffff?text=Multi-Card+Demo"
   },
   {
     id: "rewards",
@@ -59,7 +58,7 @@ const featureItems = [
       "Get personalized redemption recommendations",
       "Set up alerts for special reward promotions",
     ],
-    imageSrc: "https://placehold.co/600x400/indigo/white?text=Rewards+Optimizer+Demo"
+    imageSrc: "https://via.placeholder.com/600x400/4f46e5/ffffff?text=Rewards+Optimizer+Demo"
   },
 ];
 

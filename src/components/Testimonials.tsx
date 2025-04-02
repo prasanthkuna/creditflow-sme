@@ -9,7 +9,7 @@ const testimonials = [
     name: "Priya Sharma",
     role: "Textile Business Owner",
     company: "Sharma Textiles",
-    image: "https://placehold.co/400x400/indigo/white?text=PS",
+    image: "https://via.placeholder.com/400x400/4f46e5/ffffff?text=PS",
     testimonial: "CardPe has transformed how we manage vendor payments. We've saved ₹1.2L/yr using their platform while earning valuable rewards on our credit cards."
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     name: "Vikram Mehta",
     role: "CEO",
     company: "TechServe Solutions",
-    image: "https://placehold.co/400x400/indigo/white?text=VM",
+    image: "https://via.placeholder.com/400x400/4f46e5/ffffff?text=VM",
     testimonial: "Managing multiple credit cards for business expenses was a nightmare before CardPe. Now we track everything in one place and our cash flow has improved by 40%."
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     name: "Ananya Patel",
     role: "Finance Director",
     company: "GreenLeaf Organics",
-    image: "https://placehold.co/400x400/indigo/white?text=AP", 
+    image: "https://via.placeholder.com/400x400/4f46e5/ffffff?text=AP",
     testimonial: "The GST payment feature alone has saved us countless hours every month. CardPe's platform is intuitive and their customer support is exceptional."
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     name: "Rajesh Kumar",
     role: "Founder",
     company: "Innovative Electronics",
-    image: "https://placehold.co/400x400/indigo/white?text=RK",
+    image: "https://via.placeholder.com/400x400/4f46e5/ffffff?text=RK",
     testimonial: "As a growing electronics business, cash flow management is critical. CardPe has given us breathing room with their 45-day credit window and simplified our B2B payments."
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     name: "Neha Gupta",
     role: "Operations Head",
     company: "Sparkle Hospitality",
-    image: "https://placehold.co/400x400/indigo/white?text=NG",
+    image: "https://via.placeholder.com/400x400/4f46e5/ffffff?text=NG",
     testimonial: "CardPe helped us transition from legacy payment systems to digital solutions seamlessly. We've reduced payment processing time by 70%."
   },
   {
@@ -49,7 +49,7 @@ const testimonials = [
     name: "Suresh Iyer",
     role: "Director",
     company: "Precision Manufacturing Ltd",
-    image: "https://placehold.co/400x400/indigo/white?text=SI",
+    image: "https://via.placeholder.com/400x400/4f46e5/ffffff?text=SI",
     testimonial: "The rewards optimization feature is brilliant! We've accumulated over ₹80,000 in cashback this year alone just by routing payments through CardPe."
   }
 ];
